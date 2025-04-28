@@ -1,0 +1,9 @@
+read_lib fast_vdd1v2_basicCells.lib
+read_hdl -sv decodificador_pt2272.sv clock_12k.sv
+elaborate 
+syn_gen
+syn_map
+syn_opt
+report_area > reports/report_area_dec.txt
+write_hdl > mapped/decodificador_pt2272_mapped.sv
+write_sdf > sdf/decodificador_pt2272.sdf

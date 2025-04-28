@@ -1,0 +1,9 @@
+read_lib fast_vdd1v2_basicCells.lib
+read_hdl -sv codificador_pt2262.sv clock_12k.sv
+elaborate 
+syn_gen
+syn_map
+syn_opt
+report_area > reports/report_area_cod.txt
+write_hdl > mapped/codificador_pt2262_mapped.sv
+write_sdf > sdf/codificador_pt2262.sdf
